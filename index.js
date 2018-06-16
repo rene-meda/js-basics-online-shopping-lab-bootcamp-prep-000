@@ -11,6 +11,12 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
+ var p = Math.floor(Math.random() * Math.floor(100));
+ var object = {
+   itemName:item, 
+   itemPrice:p };
+ cart.push(object);
+ return object.itemName + " has been added to your cart.";
 }
 
 function viewCart() {
@@ -28,3 +34,7 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
+
+addToCart(bananas);
+
+console.log(cart);
